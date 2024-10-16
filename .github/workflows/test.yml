@@ -1,7 +1,7 @@
 name: Run Tests
 
 on:
-  pull_request: # Exécute les tests à chaque fois qu'un pull request est créé ou modifié
+  pull_request:
     branches:
       - main
 
@@ -25,4 +25,5 @@ jobs:
 
       - name: Run tests
         run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)  # Ajouter le répertoire courant au PYTHONPATH
           pytest

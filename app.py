@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/")
 # new modification
 def hello_world():
-    return "Hello, Docker!"
+    return "Hello, Docker with test!"
 
 
 if __name__ == "__main__":
